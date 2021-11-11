@@ -1,0 +1,49 @@
+<section class='mt-3'>
+    <div class='container'>
+        <div class='row'>
+            <div class='col'>
+                <div class='h3 text-primary'>Shopping Cart</div>
+                <p>A shopping cart (American English), buggy (Canadian English), or trolley (British English, Australian English), also known by a variety of other names, is a wheeled cart supplied by a shop or store, especially supermarkets, for use by customers inside the premises for transport of merchandise as they move around the premises, while shopping, prior to heading to the checkout counter, cashiers or tills.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class='mt-3'>
+    <div class='container'>
+        <div class='row'>
+            <div class='col'>
+                <table class='table table-hover table-striped text-center'>
+                    <thead class='bg-secondary text-white'>
+                        <tr>
+                            <th>Sno.</th>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Qty</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor='let product of products'>
+                            <td>{{product.sno}}</td>
+                            <td><img [src]='product.image' alt='' width='60' height='60'></td>
+                            <td>{{product.name}}</td>
+                            <td>{{product.price | currency: 'INR'}}</td>
+                            <td>
+                                <i class='fa fa-minus-square' (click)='decrementQty(product)'></i>
+                                {{product.qty}}
+                                <i class='fa fa-plus-square' (click)='incrementQty(product)'></i>
+                            </td>
+                            <td>{{product.qty * product.price | currency: 'INR'}}</td>
+                        </tr>
+                        <tr>
+                            <td colspan='4'></td>
+                            <td>Grand Total: </td>
+                            <td>{{getGrandTotal() | currency: 'INR'}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
