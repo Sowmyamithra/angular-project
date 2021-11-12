@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,7 +16,14 @@ import { SmsAppComponent } from './components/sms-app/sms-app.component';
 import { ShowPasswordComponent } from './components/show-password/show-password.component';
 import { AmountRangeComponent } from './components/amount-range/amount-range.component';
 import { ThemeComponent } from './components/theme/theme.component';
-import { UserRegisterComponent } from './components/user-register/user-register.component'; 
+import { UserRegisterComponent } from './components/user-register/user-register.component';
+import { AuthUserComponent } from './components/auth-user/auth-user.component';
+import { NestedCompComponent } from './components/nested-comp/nested-comp.component';
+import { ProductComponent } from './components/product/product.component';
+import { PipesComponent } from './components/pipes/pipes.component';
+import { PipesModelComponent } from './components/pipes-model/pipes-model.component';
+import { PipesServiceComponent } from './components/pipes-service/pipes-service.component';
+import { UserListComponent } from './components/user-list/user-list.component'; 
 
 
 @NgModule({
@@ -32,12 +40,20 @@ import { UserRegisterComponent } from './components/user-register/user-register.
     ShowPasswordComponent,
     AmountRangeComponent,
     ThemeComponent,
-    UserRegisterComponent
+    UserRegisterComponent,
+    AuthUserComponent,
+    NestedCompComponent,
+    ProductComponent,
+    PipesComponent,
+    PipesModelComponent,
+    PipesServiceComponent,
+    UserListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

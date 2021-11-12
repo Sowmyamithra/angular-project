@@ -1,0 +1,19 @@
+<section class='mt-3'>
+    <div class='container'>
+        <div class='row'>
+            <div class='col'>
+                <div class='h3 text-primary'>Shopping Cart</div>
+                <p>A shopping cart (American English), buggy (Canadian English), or trolley (British English, Australian English), also known by a variety of other names, is a wheeled cart supplied by a shop or store, especially supermarkets, for use by customers inside the premises for transport of merchandise as they move around the premises, while shopping, prior to heading to the checkout counter, cashiers or tills.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class='mt-3'>
+    <div class='container'>
+        <div class='row'>
+            <div class='col-12' *ngFor='let product of products'>
+                <app-product [product]='product'></app-product>
+            </div>
+        </div>
+    </div>
+</section>
